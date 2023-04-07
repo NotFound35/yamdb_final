@@ -8,7 +8,6 @@ from rest_framework import (filters, pagination, permissions, status, views,
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
-
 from reviews.models import Category, Genre, Review, Title, User
 
 from .filters import SlugFilter
