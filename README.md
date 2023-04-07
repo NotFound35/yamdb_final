@@ -34,7 +34,12 @@ python3 -m pip install --upgrade pip
 ```
 pytest
 ```
-Создайте файл docker-compose.yaml
+Зайдите на виртуальную машинy.
+```
+ssh <username>@<ipv4>
+```
+
+Создайте файл docker-compose.yaml на виртуальной машине. 
 ```
 touch docker-compose.yaml
 ```
