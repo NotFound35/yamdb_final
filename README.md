@@ -34,13 +34,29 @@ python3 -m pip install --upgrade pip
 ```
 pytest
 ```
-Отредактируйте файл `nginx/default.conf` и в строке `server_name` впишите IP виртуальной машины (сервера).  
-Скопируйте подготовленные файлы `docker-compose.yaml` и `nginx/default.conf` из вашего проекта на сервер:
+Создайте файл docker-compose.yaml
 ```
-scp docker-compose.yaml <username>@<host>/home/<username>/docker-compose.yaml
-sudo mkdir nginx
-scp default.conf <username>@<host>/home/<username>/nginx/default.conf
+touch docker-compose.yaml
 ```
+Скопируйте с локального компьютера информацию из файла docker-compose.yaml и вставьте на виртуальной машине.
+```
+nano docker-compose.yaml
+```
+
+Cоздайте на виртуальной машине директорию nginx.
+```
+mkdir nginx/
+```
+Создайте в директории nginx файл default.conf
+```
+cd nginx
+touch default.conf
+```
+Скопируйте содержимое файла default.conf с локального компьютера и вставьте в файл default.conf на виртуальной машине.
+```
+nano default.conf
+```
+
 В репозитории на Гитхабе добавьте данные в `Settings - Secrets - Actions secrets`:
 ```
 DOCKER_USERNAME - имя пользователя в DockerHub
