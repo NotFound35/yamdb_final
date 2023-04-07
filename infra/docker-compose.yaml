@@ -9,7 +9,7 @@ services:
       - postgres-data:/var/lib/postgresql/data/
     env_file:
       - ./.env
-
+#web
   web:
     image: notfound35/api_yamdb:v1
     restart: always
